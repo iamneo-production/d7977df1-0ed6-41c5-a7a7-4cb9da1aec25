@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+            body {font-family: Arial, Helvetica, sans-serif;}
+
+
+            input[type=text], input[type=password] {
+              width: 100%;
+              padding: 12px 20px;
+              margin: 8px 0;
+              display: inline-block;
+              border: 1px solid #ccc;
+              box-sizing: border-box;
+            }
+            .brand-name{
+            display:inline-flex;
+            align-items:center;
+            justify-content:center;
+            }
+            table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+      }
+
+      td, th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+      }
+
+      tr:nth-child(even) {
+        background-color: #dddddd;
+      }
+
+            button {
+              background-color: #04AA6D;
+              color: white;
+              padding: 2px 2px;
+              margin: px 0;
+              border: none;
+              cursor: pointer;
+              width: 100%;
+            }
+
+            button:hover {
+              opacity: 0.8;
+            }
+
+
+            .cancelbtn {
+              width: auto;
+              padding: 10px 18px;
+              background-color: #f44336;
+            }
+
+
+            .imgcontainer {
+              text-align: center;
+              margin: 24px 0 12px 0;
+              position: relative;
+            }
+
+            img.avatar {
+              width: 40%;
+              border-radius: 50%;
+            }
+
+            .container {
+              padding: 16px;
+            }
+
+            span.psw {
+              float: right;
+              padding-top: 16px;
+            }
+
+
+            .modal {
+              display: none;
+              position: fixed;
+              z-index: 1;
+              left: 0;
+              top: 0;
+              width: 100%;
+              height: 100%;
+              overflow: auto;
+              background-color: rgb(0,0,0);
+              background-color: rgba(0,0,0,0.4);
+              padding-top: 60px;
+            }
+
+
+            .modal-content {
+              background-color: #fefefe;
+              margin: 5% auto 15% auto;
+              border: 1px solid #888;
+              width: 80%;
+            }
+
+
+            .close {
+              position: absolute;
+              right: 25px;
+              top: 0;
+              color: #000;
+              font-size: 35px;
+              font-weight: bold;
+            }
+
+            .close:hover,
+            .close:focus {
+              color: red;
+              cursor: pointer;
+            }
+
+            /* Add Zoom Animation */
+            .animate {
+              -webkit-animation: animatezoom 0.6s;
+              animation: animatezoom 0.6s
+            }
+
+            @-webkit-keyframes animatezoom {
+              from {-webkit-transform: scale(0)}
+              to {-webkit-transform: scale(1)}
+            }
+
+            @keyframes animatezoom {
+              from {transform: scale(0)}
+              to {transform: scale(1)}
+            }
+
+
+            @media screen and (max-width: 300px) {
+              span.psw {
+                 display: block;
+                 float: none;
+              }
+              .cancelbtn {
+                 width: 100%;
+              }
+            }
+    </style>
+  </head>
+  <body>
+    <link
+      rel="stylesheet"
+      href="https://readymade-ui.netlify.app/CSS/main.css"
+    />
+    <nav class="navigation-bar flex">
+      <div class="navigation-desktop">
+        <h4 class="logo brand-name">
+          <a href="#" class=""> e-mobile cart </a>
+        </h4>
+      </div>
+      <div class="navigation-right-icons">
+        Products
+        <button
+          onclick="document.getElementById('id01').style.display='block'"
+          style="width:auto;"
+          class="nav-wishlist-icon"
+        >
+          <i class="material-icons-outlined"> shopping_cart </i>
+        </button>
+
+        orders
+        <button
+          onclick="document.getElementById('id04').style.display='block'"
+          style="width:auto;"
+          class="nav-cart-icon"
+        >
+          <i class="material-icons-outlined"> local_shipping </i>
+        </button>
+<i class="material-icons"> login </i>
+        </button>
+
+ logout
+        <button
+          onclick="document.getElementById('id04').style.display='block'"
+          style="width:auto;"
+          class="nav-wishlist-icon"
+        >
+        <i class="material-icons"> logout </i>
+        </button>
+       
+      </div>
+    </nav>
+
+    <div id="id01" class="modal">
+      <span
+        onclick="document.getElementById('id01').style.display='none'"
+        class="close"
+        title="Close Modal"
+        >&times;</span
+      >
+      <form class="modal-content" action="/action_page.php">
+        <div class="container">
+          <button
+            style="background-color:#48BF91;border-width: 2px;border-radius: 5px;"
+          >
+            ADD A NEW PRODUCT</button
+          ><br /><br />
+          <input type="text" name="a" placeholder="Product Name" /><br /><br />
+          <input type="text" name="b" placeholder="Product Price" /><br /><br />
+          <input
+            type="text"
+            name="b"
+            placeholder="Product Discription"
+          /><br /><br />
+          <input type="text" name="c" placeholder="Image URL" /><br /><br />
+          <input
+            type="text"
+            name="d"
+            placeholder="Product Quantity"
+          /><br /><br />
+          <button
+            type="submit"
+            value="Add"
+            style="background-color:#48BF91 border-width: 2px;border-radius: 5px;;"
+          >
+            Add
+          </button>
+        </div>
+      </form>
+    </div>
+
+    
+
+    <script>
+
+      var modal = document.getElementById('id01');
+
+
+
+      window.onclick = function(event) {
+          if (event.target == modal) {
+              modal.style.display = "none";
+          }
+      }
+    </script>
+
+   
+  </body>
+</html>
